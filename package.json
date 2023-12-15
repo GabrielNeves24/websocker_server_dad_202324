@@ -1,0 +1,14 @@
+{
+  "name": "websocker_server_dad_202324",
+  "version": "1.0.0",
+  "description": "web socket server for project dad 202324",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.7.2"
+  }
+}
