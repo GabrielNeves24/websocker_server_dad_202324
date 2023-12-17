@@ -18,7 +18,6 @@ io.on('connection', (socket) => {
      })
      socket.on('loggedIn', function (user) {
           socket.join(user.id)
-          console.log('testes')
           if (user.user_type == 'A') {
               socket.join('administrator')
               console.log('login as administrator')
@@ -53,5 +52,9 @@ io.on('connection', (socket) => {
 
     socket.on('blockUser', (vcard) => {
         socket.in(`vcard-${vcard}`).emit('blockUser', vcard);
+    });
+
+    socket.on('deleteUser', (vcard) => {
+        socket.in(`vcard-${vcard}`).emit('deleteUser', vcard);
     });
 })
